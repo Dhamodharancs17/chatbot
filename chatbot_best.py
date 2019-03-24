@@ -1,6 +1,12 @@
 # Building a ChatBot with Deep NLP
  
- 
+#Unzipping
+
+import zipfile
+zip_ref = zipfile.ZipFile('movie_lines.zip', 'r')
+zip_ref.extractall('data')
+zip_ref.close()
+
  
 # Importing the libraries
 import numpy as np
@@ -15,8 +21,8 @@ import time
  
  
 # Importing the dataset
-lines = open('dataset/movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
-conversations = open('dataset/movie_conversations.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
+lines = open('data/movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
+conversations = open('movie_conversations.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
  
 # Creating a dictionary that maps each line and its id
 id2line = {}
